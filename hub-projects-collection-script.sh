@@ -3,9 +3,10 @@
 # 環境変数
 
 # リポジトリのデータセット
-REPOSITORY_LIST='./test.csv'
+REPOSITORY_LIST='./sample_dataset.csv'
 # 作業ディレクトリ
-WORKING_DIR=''
+WORKING_DIR='/home/take/develop/hub-projects-collection-script'
+
 
 cd $WORKING_DIR
 i=1
@@ -29,8 +30,6 @@ while read row; do
 
     j=0
     for FILE in ${FILE_LIST[@]}; do
-      # echo "array[$j] = ${FILE}"
-      pwd
       if [ -e $FILE ]; then
         echo $FILE
         echo "File exists."
